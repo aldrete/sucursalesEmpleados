@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Generar .env con credenciales para base de datos
 
-Things you may want to cover:
+Ejectutar por primera vez:
+docker-compose run app rails new . --force --database=mysql --skip-bundle . docker-compose build
+docker-compose up
 
-* Ruby version
+Correr servidores de MySQL y ruby juntos
+docker-compose up
 
-* System dependencies
+En caso de errores:
+docker-compose run --rm app bash
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+app>> bundle install

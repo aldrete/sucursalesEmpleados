@@ -1,0 +1,23 @@
+<div class="container">
+<table style="width:100%">
+<tr>
+<th>Nombre de los Empleados</th>
+<th>Nombre</th>
+<th>Sucursal</th>
+<th>RFC</th>
+<th>Puesto</th>
+</tr>
+</table>
+<table style="width:100%">
+<tr>
+<th><%= @employee.employee_name %></th>
+<th><%= @employee.branch_name %></th>
+<th><%= @employee.rfc %></th>
+<th><%= @employee.position %></th>
+<th><%= link_to "Edit", edit_employee_path(@employee), :class => 'btn btn-default' %></th>
+<th><%= link_to "Delete", employee_path(@employee), method: :delete,
+                                            data: {confirm: 'Estas Seguro?'},
+                                            :class => 'btn btn-danger' %></th>
+</tr>
+</table>
+</div>

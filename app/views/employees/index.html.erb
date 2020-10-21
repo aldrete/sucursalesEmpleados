@@ -1,0 +1,26 @@
+<h1>Lista de Empleados</h1>
+<div class="container">
+<table style="width:100%">
+<tr>
+<th>Nombre de los Empleados</th>
+<th>Nombre</th>
+<th>Nombre de la Sucursal</th>
+<th>RFC</th>
+<th>Puesto</th>
+<th>Editar</th>
+</tr>
+</table>
+<% @employees.each do |employee| %>
+    <div class="well">
+    <table style="width:100%">
+        <tr>
+        <th><%= employee.employee_name %></th>
+        <th><%= employee.branch_name %></th>
+        <th><%= employee.rfc %></th>
+        <th><%= employee.position %></th>
+        <th><%= link_to "Edit", employee_path(employee), :class => 'btn btn-primary'%></th>
+        </tr>
+        </table>
+    </div>
+<% end %>
+</div>

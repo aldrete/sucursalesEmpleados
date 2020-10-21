@@ -1,0 +1,40 @@
+<div class="container">
+<%= form_for :branch, url: branch_path(@branch), method: :patch do |f| %>
+    <p>
+        <%= f.label :sucursal %><br>
+        <%= f.text_field(:branch_name, {:class => 'form-control'}) %>
+    </p>
+
+    <p>
+        <%= f.label :calle %><br>
+        <%= f.text_field(:street_name, {:class => 'form-control'})  %>
+    </p>
+    <p>
+        <%= f.label :colonia %><br>
+        <%= f.text_field(:colony_name, {:class => 'form-control'})  %>
+    </p>
+    <p>
+        <%= f.label :cuidad %><br>
+        <%= f.text_field(:country, {:class => 'form-control'})  %>
+    </p>
+    <p>
+        <%= f.label :estado %><br>
+        <%= f.text_field(:state, {:class => 'form-control'})  %>
+    </p>
+    <p>
+        <%= f.label :num_ext %><br>
+        <%= f.text_field(:ext_num, {:class => 'form-control'})  %>
+    </p>
+    <p>
+        <%= f.label :num_int %><br>
+        <%= f.text_field(:int_num, {:class => 'form-control'})  %>
+    </p>
+    <p>
+        <%= f.label :codigo_postal %><br>
+        <%= f.text_field(:zip_code, {:class => 'form-control'})  %>
+    </p>
+    <p>
+        <%= f.submit({:class => 'btn btn-primary'}) %>
+    </p>
+<% end %>
+</div>

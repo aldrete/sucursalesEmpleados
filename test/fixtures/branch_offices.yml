@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  branch_name: MyText
+  street_name: MyText
+  colony_name: MyText
+  country: MyText
+  state: MyText
+  ext_num: MyText
+  int_num: MyText
+  zip_code: MyText
+
+two:
+  branch_name: MyText
+  street_name: MyText
+  colony_name: MyText
+  country: MyText
+  state: MyText
+  ext_num: MyText
+  int_num: MyText
+  zip_code: MyText

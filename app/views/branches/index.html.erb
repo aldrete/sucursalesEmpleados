@@ -1,0 +1,38 @@
+<h1>Lista de sucursales</h1>
+<div class="container">
+<table style="width:100%">
+<% if @branches.empty?%>
+    <h1>No hay Sucursales</h1>
+<% else %>
+<tr>
+<th>Nombre de la sucursales</th>
+<th>Calle</th>
+<th>Colonia</th>
+<th>Pais</th>
+<th>Estado</th>
+<th>Num.Ext</th>
+<th>Num.Int</th>
+<th>Codigo Postal</th>
+<th>Editar</th>
+</tr>
+</table>
+<% @branches.each do |branch| %>
+    <div class="well">
+        <table style="width:100%">
+            <tr>
+            <th><%= branch.branch_name %></th>
+            <th><%= branch.street_name %></th>
+            <th><%= branch.colony_name %></th>
+            <th><%= branch.country %></th>
+            <th><%= branch.state %></th>
+            <th><%= branch.ext_num %></th>
+            <th><%= branch.int_num %></th>
+            <th><%= branch.zip_code %></th>
+            <th><%= link_to "Editar", branch_path(branch), :class => 'btn btn-primary'%></th>
+            </tr>
+        </table>
+
+    </div>
+<% end %>
+<% end %>
+</div>

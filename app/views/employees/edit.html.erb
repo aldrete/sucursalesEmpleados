@@ -1,0 +1,23 @@
+<div class="container">
+<%= form_for :employee, url: employee_path(@employee), method: :patch do |f| %>
+    <p>
+        <%= f.label :employee_name %><br>
+        <%= f.text_field(:employee_name, {:class => 'form-control'}) %>
+    </p>
+    <p>
+        <%= f.label :branch_name %>
+        <%= f.collection_select :branch_name, Branch.all, :branch_name, :branch_name %>
+    </p>
+    <p>
+        <%= f.label :rfc %><br>
+        <%= f.text_field(:rfc, {:class => 'form-control', :readonly => true})  %>
+    </p>
+    <p>
+        <%= f.label :position %><br>
+        <%= f.text_field(:position, {:class => 'form-control'})  %>
+    </p>
+    <p>
+        <%= f.submit ({:class => 'btn btn-primary'})%>
+    </p>
+<% end %>
+</div>

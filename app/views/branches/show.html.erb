@@ -1,0 +1,28 @@
+<div class="container">
+<table style="width:100%">
+<tr>
+<th>Nombre</th>
+<th>Calle</th>
+<th>Colonia</th>
+<th>Pais</th>
+<th>Estado</th>
+<th>Num.Ext</th>
+<th>Num.Int</th>
+<th>Codigo Postal</th>
+</tr>
+</table>
+<table style="width:100%">
+            <tr>
+            <th><%= @branch.branch_name %></th>
+            <th><%= @branch.street_name %></th>
+            <th><%= @branch.colony_name %></th>
+            <th><%= @branch.country %></th>
+            <th><%= @branch.state %></th>
+            <th><%= @branch.ext_num %></th>
+            <th><%= @branch.int_num %></th>
+            <th><%= @branch.zip_code %></th>
+            <th><%= link_to "Editar", edit_branch_path(@branch), :class => 'btn btn-default' %></th>
+            <th><%= link_to "Borrar", branch_path(@branch), method: :delete,
+                                            data: {confirm: 'Estas Seguro?'},
+                                            :class => 'btn btn-danger' %></th>
+</div>

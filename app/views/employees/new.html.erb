@@ -1,5 +1,13 @@
 <div class="container">
-<%= form_for :employee, url: employees_path do |f| %>
+<%= form_for @employee, url: employees_path do |f| %>
+    <% if @employee.errors.any? %>
+        <h3>Errores</h3>
+            <ul>
+                <% @employee.errors.full_messages.each do |messages| %>
+                    <li><%= messages %></li>
+                <% end %>
+            </ul>
+    <% end %>
     <p>
         <%= f.label :employee_name %><br>
         <%= f.text_field(:employee_name, {:class => 'form-control'}) %>
